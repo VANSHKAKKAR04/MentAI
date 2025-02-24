@@ -16,7 +16,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import Image from "next/image";
 import { checkUser } from "@/lib/checkUser";
 
 export default async function Header() {
@@ -25,17 +24,15 @@ export default async function Header() {
   return (
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/">
-          <Image
-            src={"/logo.png"}
-            alt="Mentai Logo"
-            width={100}
-            height={100}
-            className="h-12 py-1 w-auto object-contain"
-          />
+        {/* Brand Name (Left-aligned) */}
+        <Link
+          href="/"
+          className="text-2xl md:text-3xl font-bold tracking-tight text-primary"
+        >
+          MENTAI
         </Link>
 
-        {/* Action Buttons */}
+        {/* Action Buttons (Right-aligned) */}
         <div className="flex items-center space-x-2 md:space-x-4">
           <SignedIn>
             <Link href="/dashboard">

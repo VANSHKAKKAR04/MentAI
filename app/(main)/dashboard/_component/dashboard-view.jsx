@@ -83,7 +83,7 @@ const DashboardView = ({ insights }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
+            <CardTitle className="text-md font-medium">
               Market Outlook
             </CardTitle>
             <OutlookIcon className={`h-4 w-4 ${outlookColor}`} />
@@ -98,7 +98,7 @@ const DashboardView = ({ insights }) => {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">
+            <CardTitle className="text-md font-medium">
               Industry Growth
             </CardTitle>
             <TrendingUp className="h-4 w-4 text-muted-foreground" />
@@ -113,7 +113,7 @@ const DashboardView = ({ insights }) => {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Demand Level</CardTitle>
+            <CardTitle className="text-md font-medium">Demand Level</CardTitle>
             <BriefcaseIcon className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -128,7 +128,7 @@ const DashboardView = ({ insights }) => {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Top Skills</CardTitle>
+            <CardTitle className="text-md font-medium">Top Skills</CardTitle>
             <Brain className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
@@ -152,7 +152,7 @@ const DashboardView = ({ insights }) => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="h-[400px]">
+          <div className="h-[400px] text-white">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={salaryData}>
                 <CartesianGrid strokeDasharray="3 3" />
@@ -163,9 +163,9 @@ const DashboardView = ({ insights }) => {
                     if (active && payload && payload.length) {
                       return (
                         <div className="bg-background border rounded-lg p-2 shadow-md">
-                          <p className="font-medium">{label}</p>
+                          <p className="font-medium text-white">{label}</p>
                           {payload.map((item) => (
-                            <p key={item.name} className="text-sm">
+                            <p key={item.name} className="text-sm text-white">
                               {item.name}: ${item.value}K
                             </p>
                           ))}
@@ -207,13 +207,15 @@ const DashboardView = ({ insights }) => {
 
         <Card>
           <CardHeader>
-            <CardTitle>Recommended Skills</CardTitle>
-            <CardDescription>Skills to consider developing</CardDescription>
+            <CardTitle className="text-lg">Recommended Skills</CardTitle>
+            <CardDescription className="text-md">
+              Skills to consider developing
+            </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 text-md">
               {insights.recommendedSkills.map((skill) => (
-                <Badge key={skill} variant="outline">
+                <Badge key={skill} variant="outline" className="text-md">
                   {skill}
                 </Badge>
               ))}
