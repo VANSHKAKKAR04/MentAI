@@ -41,7 +41,7 @@ export default async function Header() {
                 className="hidden md:inline-flex items-center gap-2"
               >
                 <LayoutDashboard className="h-4 w-4" />
-                Industry Insights
+                Industrial Insights
               </Button>
               <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
                 <LayoutDashboard className="h-4 w-4" />
@@ -61,7 +61,7 @@ export default async function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/resume" className="flex items-center gap-2">
                     <FileText className="h-4 w-4" />
-                    Build Resume
+                    Build CV
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -76,7 +76,7 @@ export default async function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/interview" className="flex items-center gap-2">
                     <GraduationCap className="h-4 w-4" />
-                    Interview Prep
+                    Interview Preparation
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>

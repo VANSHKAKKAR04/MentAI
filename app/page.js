@@ -34,7 +34,7 @@ export default function LandingPage() {
       <section className="w-full py-16 md:py-24 bg-background">
         <div className="container mx-auto px-6 md:px-8">
           <h2 className="text-4xl font-bold text-center mb-12 tracking-tight">
-            Powerful Features for Career Growth
+            Powerful Features for Future
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {features.map((feature, index) => (
@@ -169,7 +169,7 @@ export default function LandingPage() {
       <section className="w-full">
         <div className="mx-auto py-24 bg-blue-500 rounded-lg text-center">
           <h2 className="text-4xl text-black font-bold tracking-tight sm:text-5xl">
-            Ready to Accelerate Your Career?
+            Geared up for fastracking your career?
           </h2>
           <p className="text-black/90 mt-4 text-lg">
             Join thousands of professionals using AI-powered guidance.
@@ -180,7 +180,8 @@ export default function LandingPage() {
               variant="primary"
               className="mt-6 px-6 py-3 text-lg bg-black  text-white shadow-md hover:scale-105 transition"
             >
-              Start Your Journey Today <ArrowRight className="ml-2 h-5 w-5" />
+              Start writing your success story{" "}
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
         </div>

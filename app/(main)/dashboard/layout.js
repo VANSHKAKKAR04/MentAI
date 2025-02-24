@@ -8,7 +8,7 @@ export default function Layout({ children }) {
         <h1 className="text-6xl font-bold ">Industry Insights</h1>
       </div>
       <Suspense
-        fallback={<BarLoader className="mt-4" width={"100%"} color="blue" />}
+        fallback={<BarLoader className="mt-4" width={"100%"} color="gray" />}
       >
         {children}
       </Suspense>
