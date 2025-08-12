@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MentAI – AI-Powered Career Counselling Platform
 
-## Getting Started
+MentAI is a full-stack **AI-powered career counseling tool** built with **Next.js**, **Shadcn UI**, **Inngest**, **Gemini AI**, and a robust backend.  
+It provides **personalized industry insights, mock interview preparation, AI-generated resumes & cover letters**, and much more to help users grow in their careers.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📽 Features Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. User Experience
+- **Landing Page** – Clean and modern UI to introduce the platform.  
+- **User Authentication** – Secure login/signup using modern authentication flows.  
+- **Onboarding Form** – Collects career goals, interests, and skills to tailor AI insights.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 2. AI-Powered Career Tools
+- **Industry Insights** – Weekly AI-curated career tips & updates via **Inngest Cron Jobs**.  
+- **Mock Interviews** – AI-generated interview questions with performance tracking & results.  
+- **AI Resume Builder** – Create ATS-friendly resumes in Markdown and export as PDF.  
+- **AI Cover Letter Generator** – Personalized and professional cover letter creation.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Backend & Automation
+- **Gemini AI Integration** – Powers AI insights, interview questions, and career recommendations.  
+- **Inngest Functions** – Scheduled weekly career insights sent to users.  
+- **Custom API Endpoints** – For onboarding, AI queries, and user data handling.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Frontend
+- [Next.js](https://nextjs.org/) – React-based framework for fast, server-side rendering.  
+- [Shadcn UI](https://ui.shadcn.com/) – Modern, accessible UI components.  
+- Tailwind CSS – Utility-first CSS framework.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Backend
+- Node.js with Next.js API Routes for server-side logic.  
+- Inngest for serverless event-driven functions & cron jobs.  
+- PostgreSQL (via Prisma ORM) for storing user data, onboarding responses, and resume details.
 
-## Deploy on Vercel
+### AI Integrations
+- Gemini AI API – Generates insights, interview questions, resumes, and cover letters.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📂 Project Structure
+```plaintext
+mentai/
+│
+├── app/               # Next.js app directory
+│   ├── (components)   # Reusable UI components
+│   ├── (auth)         # Login, Signup, Auth UI
+│   ├── (pages)        # App routes & views
+│
+├── lib/               # Utility functions & API helpers
+├── prisma/            # Database schema & migrations
+├── inngest/           # Inngest event functions & cron jobs
+├── public/            # Static assets
+└── README.md
